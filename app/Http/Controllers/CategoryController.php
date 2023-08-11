@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Products;
+use App\Models\Types;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+class CategoryController extends Controller
+{
+    public function index(Request $request)
+    {
+        $result = Types::where("engName", $request->Category)->first();
+        $id = ($result) ? $result->id : abort(404);
+        $productsInThisCategory = Types::find($id)->FindingProductsInThisCategory;
+        return view("category", compact("result","productsInThisCategory"));
+
+    }
+}
