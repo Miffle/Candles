@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', [\App\Http\Controllers\StartController::class, "index"])->name("start");
 Route::get('/catalog', [\App\Http\Controllers\CatalogController::class, "index"])->name("catalog");
 Route::get("/catalog/{Category}",[\App\Http\Controllers\CategoryController::class, "index"])->name("products");
 Route::get("catalog/{Category}/{EngName}_{id}", [\App\Http\Controllers\ProductController::class, "index"])->name("product");
