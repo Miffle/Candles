@@ -1,7 +1,11 @@
 @extends("layouts.main")
-@section("title"){{$Product->name}}@endsection
+@section("title")
+    {{$Product->name}}
+@endsection
 @section("Content")
-    <img src="{{Vite::asset("resources/images/".$Product->image)}}" alt="{{$Product->name}}" style="width: 15vw">
-    <h3>{{$Product->name}}</h3>
-    <label>{{$Product->description}}</label>
+    <div class="mainContainer">
+        <img class="ProductPoster" src="{{Vite::asset("resources/images/".$Product->image)}}" alt="{{$Product->name}}">
+        <h3 class="ProductName">{{$Product->name}}</h3>
+        <label class="ProductDescription">{{$Product->description}}</label>
+    </div>
 @endsection

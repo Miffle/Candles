@@ -1,0 +1,29 @@
+.navigator{
+    position: fixed;
+    bottom: 0;
+    background-color: wheat;
+    width: 100%;
+    height: 50px;
+}
+.navigator>div{
+    display: flex;
+    height: 50px;
+    margin: 0 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigator>div>a{
+    height: 50px;
+    align-items: center;
+    display: flex;
+}
+
+.NavCart{
+    height: 30px;
+}
+.NavLogin{
+    height: 35px;
+}
+.NavCatalog{
+    height: 25px;
+}

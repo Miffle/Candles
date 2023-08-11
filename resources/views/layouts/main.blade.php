@@ -7,9 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield("title")</title>
     <link rel="shortcut icon" href="{{asset("favicon.ico")}}" type="image/x-icon">
+    @vite(['resources/js/app.js',
+'resources/css/app.css',])
 </head>
 <body>
 @include("include.header")
 @yield("Content")
+@include("include.navigation")
 </body>
 </html>
