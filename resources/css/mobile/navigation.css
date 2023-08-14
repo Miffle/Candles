@@ -19,11 +19,18 @@
 }
 
 .NavCart{
-    height: 30px;
+    height: 35px;
 }
 .NavLogin{
     height: 35px;
 }
 .NavCatalog{
-    height: 25px;
+    height: 35px;
+}
+.NavHome{
+    height: 35px;
+}
+.logout{
+    display: flex;
+    justify-content: center;
 }

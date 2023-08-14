@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class StartController extends Controller
+class ProfileController extends Controller
 {
     public function index()
     {
         $user = Auth::user();
-        return view("start", compact("user"));
+        return ($user) ? view("profile", compact("user")) : abort(404);
     }
 }
