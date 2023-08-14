@@ -1,13 +1,24 @@
 <nav class="navigator">
     <div>
+        <a href="{{route("start")}}">
+            <img class="NavHome" src="{{Vite::asset("resources/images/home.svg")}}" alt="">
+        </a>
         <a href="{{route("catalog")}}">
             <img class="NavCatalog" src="{{Vite::asset("resources/images/catalog.svg")}}" alt="">
         </a>
-        <a href="{{route("login")}}" class="NavLogin">
-            <img src="{{Vite::asset("resources/images/profile.png")}}" alt="" class="NavLogin">
-        </a>
+        @if($user==null)
+            <a href="{{route("login")}}" class="NavLogin">
+                <img src="{{Vite::asset("resources/images/profile.png")}}" alt="" class="NavLogin">
+            </a>
+        @else()
+            <div class="logout">
+                <a href="{{route("profile")}}" >
+                    <img src="{{Vite::asset("resources/images/profile.png")}}" alt="" class="NavLogin">
+                </a>
+            </div>
+        @endif
         <a href="" class="cart">
-            <img src="{{Vite::asset("resources/images/cart.svg")}}" alt="" class="NavCart">
+            <img src="{{Vite::asset("resources/images/cart.png")}}" alt="" class="NavCart">
         </a>
     </div>
 </nav>

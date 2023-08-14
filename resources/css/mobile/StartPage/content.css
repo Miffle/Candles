@@ -1,0 +1,39 @@
+.Greeting {
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 60px;
+}
+
+.HiText {
+    font-size: large;
+    text-indent: 30px;
+
+}
+
+.HiText::first-letter {
+    font-size: xx-large;
+}
+
+.TgChannel {
+    display: flex;
+    height: 40px;
+    width: 98%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+.Social{
+    margin-top: 1vh;
+    width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.SocialIcon {
+    width: 40px;
+}
