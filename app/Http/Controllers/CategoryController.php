@@ -10,7 +10,8 @@ class CategoryController extends Controller
 {
     public function index(Request $request)
     {
-        $user = Auth::user();
+        $user = $this->getUser();
+        $this->cartInit();
         $result = Types::where("engName", $request->Category)->first();
         $id = ($result) ? $result->id : abort(404);
         $productsInThisCategory = Types::find($id)->FindingProductsInThisCategory;

@@ -8,7 +8,8 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
+        $user = $this->getUser();
+        $this->cartInit();
         return ($user) ? view("profile", compact("user")) : abort(404);
     }
 }

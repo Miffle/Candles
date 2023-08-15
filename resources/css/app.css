@@ -1,4 +1,4 @@
 @import "body.css";
-/*@import "desktop/main.css";*/
-@import url("mobile/main.css") (min-width: 375px) and (max-width: 425px);
-@import url("desktop/main.css") (min-width: 426px);
+@import "mobile/main.css";
+/*@import url("mobile/main.css") (min-width: 375px) and (max-width: 425px);*/
+/*@import url("desktop/main.css") (min-width: 426px);*/

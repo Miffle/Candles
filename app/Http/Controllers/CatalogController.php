@@ -10,7 +10,8 @@ class CatalogController extends Controller
     public function index()
     {
         $categories = Types::all();
-        $user = Auth::user();
+        $user = $this->getUser();
+        $this->cartInit();
         return view("catalog", compact("categories", "user"));
     }
 }
