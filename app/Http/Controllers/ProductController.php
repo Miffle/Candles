@@ -17,7 +17,8 @@ class ProductController extends Controller
             ->where("engName", "=", $request->EngName)
             ->where("type", "=", $typeId)
             ->first();
-        $user = Auth::user();
+        $user = $this->getUser();
+        $this->cartInit();
         return ($Product) ? view("product", compact("Product", "user")) : abort(404);
 
     }

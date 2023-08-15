@@ -9,7 +9,8 @@ class StartController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
+        $user = $this->getUser();
+        $this->cartInit();
         return view("start", compact("user"));
     }
 }

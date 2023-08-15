@@ -18,6 +18,7 @@ Route::get('/catalog', [\App\Http\Controllers\CatalogController::class, "index"]
 Route::get("/catalog/{Category}",[\App\Http\Controllers\CategoryController::class, "index"])->name("products");
 Route::get("catalog/{Category}/{EngName}_{id}", [\App\Http\Controllers\ProductController::class, "index"])->name("product");
 Route::get("/profile", [\App\Http\Controllers\ProfileController::class, "index"])->name("profile");
+Route::get("/cart", [\App\Http\Controllers\CartController::class, "index"])->name("cart");
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

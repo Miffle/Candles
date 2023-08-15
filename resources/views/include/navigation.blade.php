@@ -17,7 +17,7 @@
                 </a>
             </div>
         @endif
-        <a href="" class="cart">
+        <a href="{{route("cart")}}" class="cart">
             <img src="{{Vite::asset("resources/images/cart.png")}}" alt="" class="NavCart">
         </a>
     </div>
