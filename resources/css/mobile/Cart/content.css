@@ -1,0 +1,66 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+.cartContent{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(45vw,1fr));
+    grid-gap: 2vw;
+    width: 95%;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.productCard>img, .productCard>p{
+    width: 45vw;
+}
+.product{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(320px,1fr));
+}
+.productCard, .controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.controls{
+    margin-top: auto;
+    width: 100%;
+}
+.paymentBtn{
+    width: 95%;
+    margin-bottom: 60px;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid black;
+    height: 50px;
+    margin-top: 10px;
+}
+.removeBtn{
+    display: flex;
+    font-size: large;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.minusPlus{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
+}

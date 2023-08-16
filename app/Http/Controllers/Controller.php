@@ -21,6 +21,7 @@ class Controller extends BaseController
     {
         \Cart::session(Session::getId());
     }
+
     public function getCartContent(){
         $this->cartInit();
         return \Cart::getContent();

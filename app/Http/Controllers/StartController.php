@@ -11,6 +11,7 @@ class StartController extends Controller
     {
         $user = $this->getUser();
         $this->cartInit();
+
         return view("start", compact("user"));
     }
 }

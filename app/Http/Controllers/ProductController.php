@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Products;
 use App\Models\Types;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -20,6 +19,5 @@ class ProductController extends Controller
         $user = $this->getUser();
         $this->cartInit();
         return ($Product) ? view("product", compact("Product", "user")) : abort(404);
-
     }
 }
