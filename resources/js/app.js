@@ -6,10 +6,53 @@ import.meta.glob([
 ]);
 const minusBtn = document.getElementsByClassName("minusBtn");
 const itemCount = document.getElementsByClassName("inCartCount");
+const productName = document.getElementById("nameInput");
+const productEngName = document.getElementById("engNameInput");
+const typeName = document.getElementById("typeName");
+const typeEngName = document.getElementById("typeEngName");
+
 window.addEventListener("load", function () {
     for(let i = 0; i<minusBtn.length; i++){
-        if(itemCount[i].textContent === "1"){
+        if(itemCount[i].textContent === "1 шт."){
             minusBtn[i].classList.add("untouchable");
         }
+
     }
 })
+productName.oninput = function (){
+    console.log(translit(productName.value));
+    productEngName.value = translit(productName.value);
+
+}
+typeName.oninput = function (){
+    console.log(translit(typeName.value));
+    typeEngName.value = translit(typeName.value);
+
+}
+function translit(word){
+    var converter = {
+        'а': 'a',    'б': 'b',    'в': 'v',    'г': 'g',    'д': 'd',
+        'е': 'e',    'ё': 'e',    'ж': 'zh',   'з': 'z',    'и': 'i',
+        'й': 'y',    'к': 'k',    'л': 'l',    'м': 'm',    'н': 'n',
+        'о': 'o',    'п': 'p',    'р': 'r',    'с': 's',    'т': 't',
+        'у': 'u',    'ф': 'f',    'х': 'h',    'ц': 'c',    'ч': 'ch',
+        'ш': 'sh',   'щ': 'sch',  'ь': '',     'ы': 'y',    'ъ': '',
+        'э': 'e',    'ю': 'yu',   'я': 'ya'
+    };
+
+    word = word.toLowerCase();
+
+    var answer = '';
+    for (var i = 0; i < word.length; ++i ) {
+        if (converter[word[i]] == undefined){
+            answer += word[i];
+        } else {
+            answer += converter[word[i]];
+        }
+    }
+
+    answer = answer.replace(/[^-0-9a-z]/g, '-');
+    answer = answer.replace(/[-]+/g, '-');
+    answer = answer.replace(/^\-|-$/g, '');
+    return answer;
+}

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    public function index()
+    public function __invoke()
     {
         $user = $this->getUser();
         $this->cartInit();

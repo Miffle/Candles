@@ -14,54 +14,41 @@
 }
 .ProductDescription{
     font-size: large;
-}
-
-.controlsBtns{
-    display: flex;
-
-}
-.inCartCount{
-    margin: 0 4vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: large;
-}
-.minusBtn, .plusBtn{
-    width: 15vw;
-    height: 30px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    font-size: x-large;
-    border: 1px solid black;
-    text-decoration: none;
-    color: black;
-    justify-content: center;
-    pointer-events: all;
-    transition: background-color 300ms ease-out;
+    word-wrap: anywhere;
 }
 .addToCartBtn{
     display: flex;
     padding: 1vh 1vw;
+    height: fit-content;
     width: fit-content;
     margin-top: 10px;
     font-size: large;
-    border: 1px solid black;
+    border: var(--border-color);
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     justify-content: center;
 }
 .untouchable{
-    color: grey;
-    border: 1px solid gray;
-    pointer-events: none;
+    color: var(--untouch-color) !important;;
+    border: 1px solid var(--untouch-color) !important;;
+    pointer-events: none !important;;
 }
-
-.plusBtn:hover{
-    background-color: aquamarine;
+.controlsBtns{
+    display: flex;
+    height: 30px;
+    width: 90%;
 }
-.minusBtn:hover{
-    background-color: indianred;
+.productMinusBtn, .productPlusBtn{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    border: var(--border-color);
+    text-decoration: none;
+    color: var(--text-color);
+    justify-content: center;
+    pointer-events: all;
+    transition: background-color 300ms ease-out;
 }
 

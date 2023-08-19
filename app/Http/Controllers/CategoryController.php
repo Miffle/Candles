@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
-    public function index(Request $request)
+    public function __invoke(Request $request)
     {
         $user = $this->getUser();
         $this->cartInit();

@@ -1,6 +1,6 @@
 @extends("layouts.main")
 @section("title")
-    Название магазина
+    Candles for your emotions
 @endsection
 @section("Content")
     <div class="Greeting">

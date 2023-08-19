@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index(Request $request)
+    public function __invoke(Request $request)
     {
         $id = $request->id;
         $typeId = Types::where("engName", "=", $request->Category)->first()->id;

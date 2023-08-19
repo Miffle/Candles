@@ -4,8 +4,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: wheat;
-    box-shadow: 0 2px 1em #af935d;
+    background-color: var(--navigator-header-color);
+    -webkit-box-shadow: var(--header-shadow);
+    -moz-box-shadow: var(--header-shadow);
+    box-shadow: var(--header-shadow);
+    z-index: 201;
+    position: sticky;
 }
 header>a{
     height: 70px;
@@ -29,7 +33,7 @@ header>a{
     justify-content: flex-end;
 }
 header > div > a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     font-size: x-large;
     border-bottom: 1px solid transparent;
@@ -38,7 +42,7 @@ header > div > a {
 }
 
 header > div > a:hover {
-    border-bottom: 1px solid black;
+    border-bottom: var(--border-color);
 }
 
 .catalog {
