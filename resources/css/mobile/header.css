@@ -52,7 +52,14 @@ header > div > a:hover {
 .ShopName {
     height: 60px;
 }
-
-.login, .cart {
-    height: 40px;
+.cart{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.countIndicator{
+    position: absolute;
+    font-size: small;
+    top: 5px;
+    right: 2px;
+    margin: 0;
 }

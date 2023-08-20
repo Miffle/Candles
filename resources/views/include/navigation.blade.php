@@ -12,13 +12,16 @@
             </a>
         @else()
             <div class="logout">
-                <a href="{{route("profile")}}" >
+                <a href="{{route("profile")}}">
                     <img src="{{Vite::asset("resources/images/profile.png")}}" alt="" class="NavLogin">
                 </a>
             </div>
         @endif
         <a href="{{route("cart")}}" class="cart">
             <img src="{{Vite::asset("resources/images/cart.png")}}" alt="" class="NavCart">
+            @if(\Cart::getTotalQuantity())
+                <p class="countIndicator">{{\Cart::getTotalQuantity()}}</p>
+            @endif
         </a>
     </div>
 </nav>

@@ -17,11 +17,6 @@ class AdminController extends Controller
         $types = Types::all();
         return view("admin", compact("user", "types"));
     }
-
-//    public function addProduct(Request $request)
-//    {
-//
-//    }
     public function AddProduct(Admin $request)
     {
         $data = $request->validated();

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Types;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -15,11 +16,12 @@ class TypesFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Types::class;
     public function definition(): array
     {
         return [
             'name' => fake()->unique()->text(),
-            'engName' => fake()->unique()->text(),
+            'engName' => fake()->unique()->word(),
             'image' => fake()->imageUrl(),
         ];
     }
