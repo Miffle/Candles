@@ -6,7 +6,7 @@
     <div class="content">
         @foreach($productsInThisCategory as $product)
             <a class="category" href="{{route("product", [$result->engName, $product->engName, $product->id])}}">
-                <img src="{{Vite::asset("resources/images/".$product->image)}}" alt="">
+                <img src="{{asset("storage/".$product->image)}}" alt="">
                 <p>{{$product->name}}</p>
             </a>
         @endforeach

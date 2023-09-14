@@ -1,0 +1,9 @@
+body{
+    --background-color: antiquewhite;
+    --navigator-header-color: wheat;
+    --border-color: 1px solid black;
+    --header-shadow: 0 2px 10px 1px #edcc90;
+    --products-shadow-color: 0 2px 0.5em #af935d;
+    --text-color: black;
+    --untouch-color: grey;
+}

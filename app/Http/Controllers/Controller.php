@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Cart;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -19,10 +20,11 @@ class Controller extends BaseController
 
     public function cartInit()
     {
-        \Cart::session(Session::getId());
+        Cart::session(Session::getId());
     }
+
     public function getCartContent(){
         $this->cartInit();
-        return \Cart::getContent();
+        return Cart::getContent();
     }
 }

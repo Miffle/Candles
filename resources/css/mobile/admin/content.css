@@ -1,0 +1,21 @@
+.addProductForm form{
+    display: grid;
+    grid-auto-columns: max-content;
+    margin-top: 10px;
+}
+form label{
+    font-size: large;
+}
+.productImageLoad form{
+    display: grid;
+    grid-auto-columns: max-content;
+    margin-top: 50px;
+}
+.addTypeForm form{
+    display: grid;
+    grid-auto-columns: max-content;
+    margin-top: 50px;
+}
+span{
+    margin-top: 50px;
+}

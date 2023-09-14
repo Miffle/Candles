@@ -1,3 +1,4 @@
+@import "colors.css";
 @import "body.css";
 @import "mobile/main.css";
 /*@import url("mobile/main.css") (min-width: 375px) and (max-width: 425px);*/

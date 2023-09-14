@@ -15,9 +15,9 @@
     flex-wrap: wrap;
     justify-content: center;
     text-decoration: none;
-    color: black;
-    background-color: wheat;
-    box-shadow: 0 2px 0.5em #af935d;
+    color: var(--text-color);
+    background-color: var(--navigator-header-color);
+    box-shadow: var(--products-shadow-color);
     border-radius: 10px;
 }
 .category>img{
